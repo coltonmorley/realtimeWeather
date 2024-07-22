@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src = "script.js" defer></script>
+    <link rel="stylesheet" href = "style.css">
+</head>
+<body>
+    <!--CM-->
+<div class=container>
+    <div class="header">
+      <div class="logo">API Powered Real Time Weather</div>
+      <div class="add">
+        <label for="search">Enter city name, IP address, or US/UK/Can Postal Code:</label>
+        <div class="mini-container">
+        <input type="text" name="search" id="search" onkeypress="enterCheck(event)">
+        <button id="addButton" onClick="weatherModule.userAdd()">Add</button>
+        </div>
+        <div class="errorTxt"></div>
+        
+      </div>
+      <div class="right-buttons">
+      <button class="scale scale-button" id="celsius" onclick="weatherModule.toggleScale()">Celsius</button>
+      <button class="scale scale-button" id="fahr" onclick="weatherModule.toggleScale()" disabled>Fahrenheit</button>
+      <button id="refresh" onclick="weatherModule.refresh()">Refresh Weather</button>
+      </div>  
+    </div>
+    <div class="content">
+      <div class="card" id="card0">
+        <div class="top">
+          <div class="geoNotice">Current Location</div>
+          <div class="large city">Loading</div>
+          <div class="medium state">-----</div>
+          <div class="small country">-------</div>
+        </div>
+        <div class="middle"> 
+          <div class="temp">--</div>
+          <div class="small scale">------</div>
+          <div class="medium condition">--------</div>
+          <div class="small wind">--------</div>
+        </div>
+        <div class="bottom">
+          <div class="medium time">Local Time: ----</div>
+        <div class="sunInfo small">
+          <div class="sunrise">Sunrise: -----</div>
+          <div class="sunset">Sunset: -----</div>
+          </div>
+        </div>
+      </div>
+      </div>
+      
+     </div>
+</body>
+</html>
